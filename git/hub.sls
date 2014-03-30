@@ -1,12 +1,16 @@
+{% set version = "1.12.0" %}
+{% set sha256sum = "fb45c3777fb1b16fd07bfd7a66fb986b3582713555128e8118782072682374d1" %}
 hub:
   archive.extracted:
     - name: /tmp
-    - source: https://github.com/github/hub/archive/master.zip
-    - archive_format: zip
-    - if_missing: /tmp/hub-master
+    - source: https://github.com/github/hub/archive/v{{ version }}.tar.gz
+    - tar_options: z
+    - archive_format: tar
+    - source_hash: sha256={{ sha256sum }}
+    - if_missing: /tmp/hub-{{ version }}
   cmd.run:
     - name: rake install
-    - cwd: /tmp/hub-master
+    - cwd: /tmp/hub-{{ version }}
     - unless: "test -x /usr/local/bin/hub"
     - require:
       - archive: hub
