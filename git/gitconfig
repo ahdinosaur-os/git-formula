@@ -1,0 +1,10 @@
+{% for section, options in config.items() %}
+{%- if options == None -%}
+{%- set options = {} -%}
+{%- endif -%}
+[{{ section }}]
+{%- for name, value in options.items() %}
+	{{ name }} = {{ value }}
+{%- endfor %}
+
+{% endfor %}

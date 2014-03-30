@@ -1,2 +1,10 @@
 git:
   install_from_source: True
+  config:
+    user:
+      email: example@domain.tld
+      name: Example
+    core:
+      editor: vim
+    merge:
+      tool: vimdiff
