@@ -4,7 +4,6 @@ hub:
   archive.extracted:
     - name: /tmp
     - source: https://github.com/github/hub/archive/v{{ version }}.tar.gz
-    - tar_options: z
     - archive_format: tar
     - source_hash: sha256={{ sha256sum }}
     - if_missing: /tmp/hub-{{ version }}
