@@ -23,4 +23,4 @@ Install git
 ``git.hub``
 -----------
 
-Install `hub<http://hub.github.com/>`_
+Install `hub <http://hub.github.com/>`_
