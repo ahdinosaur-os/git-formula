@@ -1,5 +1,5 @@
-{% set version = "1.12.0" %}
-{% set sha256sum = "fb45c3777fb1b16fd07bfd7a66fb986b3582713555128e8118782072682374d1" %}
+{% set version = "2.2.1" %}
+{% set sha256sum = "9350aba6a8e3da9d26b7258a4020bf84491af69595f7484f922d75fc8b86dc10" %}
 hub:
   archive.extracted:
     - name: /tmp
