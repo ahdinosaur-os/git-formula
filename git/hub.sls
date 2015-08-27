@@ -10,7 +10,7 @@ hub:
   cmd.run:
     - name: rake install
     - cwd: /tmp/hub-{{ version }}
-    - unless: "test -x /usr/local/bin/hub"
+    - unless: "test -x /usr/local/bin/hub || test $(hub --version | grep hub | cut -d ' ' -f 3) != {{ version }}"
     - require:
       - archive: hub
       - pkg: ruby
